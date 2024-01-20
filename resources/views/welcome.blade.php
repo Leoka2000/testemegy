@@ -17,7 +17,7 @@
 
 </head>
 
-<body class="antialiased">
+<body class="antialiased dark">
     <div
         class="min-h-screen bg-gray-100 bg-center sm:flex sm:justify-center sm:items-center bg-dots-darker dark:bg-dots-lighter dark:bg-gray-900 selection:bg-violet-500 selection:text-white">
         @if (Route::has('login'))

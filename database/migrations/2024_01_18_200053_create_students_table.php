@@ -17,9 +17,12 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('university');
+            $table->string('photo');
             $table->string('degree');
+            $table->string('area');
             $table->text('description');
             $table->string('cv');
+            $table->boolean('accept-terms');
             $table->string('linkedin');
             $table->timestamps();
         });

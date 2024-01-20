@@ -42,4 +42,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+
+    public function students() {
+        // associating userid with notes
+        return $this->hasMany(Students::class);
+    }
+
+    // auth()->user() 'who ever is a loged in user, we can get all of of his notes ->notes() and loop them, or we can create a note that is linked to the user ->create()
+    // auth()->user()->notes()->create;
+    // associating a note with a username 'who ever this note it, from whom is this name?'
+    // $note->user()->name;
+
+
+    // tbm tem funçao que retorna id de todos os usuarios que publicaram notas entre minuto 46 e 50 do video
+
+    // function que retorna usuarios admins, tbm entre minuto 46 e 50
+
 }

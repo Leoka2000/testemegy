@@ -23,4 +23,13 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
+    Route::view('student/create', 'students.create-student')
+    ->middleware(['auth'])
+    ->name('students.create-student');
+
+    Route::view('student/list', 'students.pages.all-students')
+    ->middleware(['auth'])
+    ->name('students.pages.all-students');
+
+
 require __DIR__.'/auth.php';

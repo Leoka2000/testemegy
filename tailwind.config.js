@@ -4,6 +4,7 @@ import aspectratio from '@tailwindcss/aspect-ratio';
 import typography from '@tailwindcss/typography';
 import colors from 'tailwindcss/colors.js';
 
+const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -17,23 +18,20 @@ export default {
         './vendor/wireui/wireui/src/View/**/*.php'
     ],
    
+    presets: [
 
+        require('./vendor/wireui/wireui/tailwind.config.js')
+
+    ],
     theme: {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
-            presets: [
-
-                require('./vendor/wireui/wireui/tailwind.config.js')
-        
-            ],
+            
             colors: {
                 primary: colors.violet,
-                background: {
-                    white: colors.white,
-                    dark: colors.slate[800]
-                  }
+               
             }
         },
     },
